@@ -55,20 +55,20 @@ section {
         display: inline-block;
         margin-bottom: 1rem;
     }
+    h2 {
+        color: #455b73;
+    }
+    h4 {
+        margin-bottom: 1rem;
+    }
+    h5 {
+        color: #666;
+    }
+    p {
+        margin: 0.3rem 0 0.7rem 0;
+        font-weight: 200;
+    }
     .left {
-        h2 {
-            color: #455b73;
-        }
-        h4 {
-            margin-bottom: 1rem;
-        }
-        h5 {
-            color: #666;
-        }
-        p {
-            margin: 0.3rem 0 0.7rem 0;
-            font-weight: 200;
-        }
         .works {
             margin: 0 0 1.5rem 0;
             .work {
@@ -86,13 +86,7 @@ section {
                     border-radius: 50%;
                 }
                 &::before {
-                    content: "";
-                    height: 100%;
-                    width: 3px;
-                    position: absolute;
-                    background-color: #455b73;
-                    top: 5px;
-                    left: 2px;
+                    @include before-line
                 }
             }
         }
@@ -102,34 +96,25 @@ section {
                 padding-left: 1rem;
                 position: relative;
                 &::before {
-                    content: "";
-                    height: 100%;
-                    width: 3px;
-                    position: absolute;
-                    background-color: #455b73;
-                    top: 5px;
-                    left: 2px;
+                    @include beforeline
                 }
             }
         }
     }
     .right {
-        h2 {
-            color: #455b73;
-        }
-        h4 {
-            display: inline;
-            padding-left: 10px;
-        }
-        h5 {
-            color: #666;
-            display: inline;
-        }
-        p {
-            margin: 0.3rem 0;
-            font-weight: 200;
-        }
         .studys {
+            margin: 0 0 1.5rem 0;
+            h4 {
+                display: inline;
+                padding-left: 10px;
+            }
+            h5 {
+                color: #666;
+                display: inline;
+            }
+            p {
+                margin: 0.3rem 0;
+            }
             margin: 0 0 1.5rem 0;
             span {
                 color: #455b73;
@@ -139,13 +124,7 @@ section {
                 padding-left: 1rem;
                 position: relative;
                 &::before {
-                    content: "";
-                    height: 100%;
-                    width: 3px;
-                    position: absolute;
-                    background-color: #455b73;
-                    top: 5px;
-                    left: 2px;
+                    @include beforeline
                 }
             }
         }
@@ -155,17 +134,12 @@ section {
                 padding-left: 1rem;
                 position: relative;
                 &::before {
-                    content: "";
-                    height: 100%;
-                    width: 3px;
-                    position: absolute;
-                    background-color: #455b73;
-                    top: 5px;
-                    left: 2px;
+                    @include beforeline
                 }
             }
         }
         .portfolio {
+            margin: 0 0 1.5rem 0;
             a {
                 text-decoration: none;
             }
@@ -189,7 +163,8 @@ section {
                         width: 100%;
                         object-fit: cover;
                         position: absolute;
-                        top: 50%; left: 50%;
+                        top: 50%;
+                        left: 50%;
                         transform: translate(-50%, -50%);
                     }
                 }
@@ -208,8 +183,18 @@ section {
     }
 }
 
-@media (max-width: 500px) {
-    section , .title {
+@mixin before-line {
+    content: "";
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    background-color: #455b73;
+    top: 5px;
+    left: 2px;
+}
+@media (max-width: 600px) {
+    section,
+    .title {
         grid-template-columns: 1fr;
     }
     section .right .portfolio .show {

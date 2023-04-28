@@ -204,7 +204,7 @@ section .right .portfolio .show .showtext p {
   color: black;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   section, .title {
     grid-template-columns: 1fr;
   }
