@@ -57,16 +57,16 @@ section h3 {
   display: inline-block;
   margin-bottom: 1rem;
 }
-section .left h2 {
+section h2 {
   color: #455b73;
 }
-section .left h4 {
+section h4 {
   margin-bottom: 1rem;
 }
-section .left h5 {
+section h5 {
   color: #666;
 }
-section .left p {
+section p {
   margin: 0.3rem 0 0.7rem 0;
   font-weight: 200;
 }
@@ -113,23 +113,20 @@ section .left .educationals .educational::before {
   top: 5px;
   left: 2px;
 }
-section .right h2 {
-  color: #455b73;
+section .right .studys {
+  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.5rem 0;
 }
-section .right h4 {
+section .right .studys h4 {
   display: inline;
   padding-left: 10px;
 }
-section .right h5 {
+section .right .studys h5 {
   color: #666;
   display: inline;
 }
-section .right p {
+section .right .studys p {
   margin: 0.3rem 0;
-  font-weight: 200;
-}
-section .right .studys {
-  margin: 0 0 1.5rem 0;
 }
 section .right .studys span {
   color: #455b73;
@@ -163,6 +160,9 @@ section .right .skills div::before {
   background-color: #455b73;
   top: 5px;
   left: 2px;
+}
+section .right .portfolio {
+  margin: 0 0 1.5rem 0;
 }
 section .right .portfolio a {
   text-decoration: none;
@@ -205,7 +205,8 @@ section .right .portfolio .show .showtext p {
 }
 
 @media (max-width: 600px) {
-  section, .title {
+  section,
+  .title {
     grid-template-columns: 1fr;
   }
   section .right .portfolio .show {
